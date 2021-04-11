@@ -188,7 +188,7 @@ class CogGuide(commands.Cog):
             if cog is None:
                 await ctx.send("No cog found with that name")
                 return
-            await self.create_cog_guide(camel_cog_name, cog)
+            await self.create_cog_guide(cogname, cog)
 
         await ctx.send(f"Saved to ```{cog_data_path(self)}```")
 
