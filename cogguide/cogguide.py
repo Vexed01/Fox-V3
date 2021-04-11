@@ -213,11 +213,12 @@ find detailed docs about usage and commands.
 
 ``[p]`` is considered as your prefix.
 """
-        if camel_cog_name != "Core":
-            intro += f"""
-.. note:: To use this cog, load it by typing this::
+        intro += f"""
+.. note::
 
-        [p]load {'customcom' if lower_cog_name == 'customcommands' else lower_cog_name}
+    To use this cog, you will need to install and load it.
+
+    See the :ref:`getting_started` page.
 """
         intro += f"""
 .. _{lower_cog_name}-usage:
