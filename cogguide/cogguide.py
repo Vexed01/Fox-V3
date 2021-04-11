@@ -169,9 +169,11 @@ class CogGuide(commands.Cog):
 
     @checks.is_owner()
     @commands.command()
-    async def cogguide(self, ctx: commands.Context, camel_cog_name: str):
+    async def cogguide(self, ctx: commands.Context, *, cogs: str):
         """
         Create a ReStructuredText file for a given loaded cog.
+
+        You can do multiple cogs with a space.
 
         Result can be found in the cog data folder.
 
@@ -181,11 +183,12 @@ class CogGuide(commands.Cog):
         Returns: tick
 
         """
-        cog: Optional[Cog] = self.bot.get_cog(camel_cog_name)
-        if cog is None:
-            await ctx.send("No cog found with that name")
-            return
-        await self.create_cog_guide(camel_cog_name, cog)
+        for cogname in cogs.split(" "):
+            cog: Optional[Cog] = self.bot.get_cog(cogname)
+            if cog is None:
+                await ctx.send("No cog found with that name")
+                return
+            await self.create_cog_guide(camel_cog_name, cog)
 
         await ctx.send(f"Saved to ```{cog_data_path(self)}```")
 
