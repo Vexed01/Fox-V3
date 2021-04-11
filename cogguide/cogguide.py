@@ -187,7 +187,7 @@ class CogGuide(commands.Cog):
             return
         await self.create_cog_guide(camel_cog_name, cog)
 
-        await ctx.tick()
+        await ctx.send(f"Saved to ```{cog_data_path(self)}```")
 
     async def create_cog_guide(self, camel_cog_name, cog):
         path: pathlib.Path = cog_data_path(self)
