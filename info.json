@@ -1,7 +1,7 @@
 {
 	"author": ["Bobloy"],
-	"install_msg": "Thank you for installing Fox-V3 by Bobloy",
+	"install_msg": "Sure, if you want to.....",
 	"name": "Fox-V3",
-	"short": "Cogs by Bobloy",
-	"description": "Cogs for RED Discord Bot by Bobloy"
+	"short": "Fork for making the CogGuide compatible with my cogs (Vex-Cogs)",
+	"description": "Fork for making the CogGuide compatible with my cogs (Vex-Cogs)"
 }
