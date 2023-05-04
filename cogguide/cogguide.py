@@ -186,7 +186,7 @@ class CogGuide(commands.Cog):
         for cogname in cogs.split(" "):
             cog: Optional[Cog] = self.bot.get_cog(cogname)
             if cog is None:
-                await ctx.send("No cog found with that name")
+                await ctx.send(f"No cog found with name {cogname}")
                 return
             await self.create_cog_guide(cogname, cog)
 
